@@ -4,9 +4,7 @@ import axios from 'axios';
 const CheckoutButton = ({ amount, onSuccess }) => {
   const loadRazorpay = async () => {
     try {
-      const { data: order } = await axios.post('http://localhost:3000/api/payment/create-order', {
-        amount,
-      });
+      const { data: order } = await axios.post(`${import.meta.env.VITE_APP_API_URL}/payment/create-order`, {  amount,});
 
       const options = {
         key: import.meta.env.VITE_RAZORPAY_KEY_ID,
@@ -16,7 +14,7 @@ const CheckoutButton = ({ amount, onSuccess }) => {
         description: "Order Payment",
         order_id: order.id,
         handler: async function (response) {
-          const verifyRes = await axios.post('http://localhost:3000/api/payment/verify-payment', {
+          const verifyRes = await axios.post(`${import.meta.env.VITE_APP_API_URL}/payment/verify-payment`, {
             razorpay_order_id: response.razorpay_order_id,
             razorpay_payment_id: response.razorpay_payment_id,
             razorpay_signature: response.razorpay_signature,

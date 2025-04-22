@@ -9,7 +9,7 @@ const MenuPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/menu/${id}`)
+    axios.get(`${import.meta.env.VITE_APP_API_URL}/menu/${id}`)
       .then(res => setMenu(res.data))
       .catch(err => console.error(err));
   }, [id]);

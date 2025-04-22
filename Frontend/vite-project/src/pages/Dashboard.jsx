@@ -21,7 +21,7 @@ export default function Dashboard() {
 
   const fetchUsers = async (token) => {
     try {
-      const res = await axios.get("http://localhost:3000/api/auth/users", {
+      const res = await axios.get(`${import.meta.env.VITE_APP_API_URL}/auth/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

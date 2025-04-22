@@ -11,7 +11,7 @@ const RestaurantPage = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/api/restaurants')
+      .get(`${import.meta.env.VITE_APP_API_URL}/restaurants`)
       .then(res => {
         setRestaurants(res.data);
         setFilteredRestaurants(res.data);
