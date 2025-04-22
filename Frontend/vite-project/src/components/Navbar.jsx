@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Left: Brand */}
         <div className="brand-left">
-          <Link className="brand" to="/">🍔 China-Town</Link> 
+          <Link className="brand" to="/">🍔 ChiNa-ToWn</Link> 
         </div>
 
         {/* Right: Links */}
