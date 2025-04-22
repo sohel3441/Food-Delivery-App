@@ -1,0 +1,92 @@
+
+.restaurant-page {
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  .page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    /* color: #1e3a8a; */
+    /* color: #FFD580; */
+    color: #dc8711;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: make cards look elegant */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Image inside card if any */
+  .card-img-top {
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+    height: 180px;
+  }
+  
+  /* Fade in effect on page load */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    color: #dc8711;;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input::placeholder {
+    color: #dc8711;
+  }
+  
+  .search-input:focus {
+    border-color: #00e676;
+    box-shadow: 0 0 8px rgba(0, 230, 118, 0.4);
+  }
+  
+
+
+  .restaurant-page.dark {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+
+  
+  .search-input {
+    padding: 0.8rem;
+    border-radius: 8px;
+    width: 50%;
+    border: none;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
